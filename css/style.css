@@ -1,0 +1,175 @@
+.top {
+	padding-top: 20px;
+}
+
+.right {
+	float: right;
+}
+
+#drawing-area {
+  display: none;
+  background: transparent;
+  position: absolute;
+  z-index: 9999;
+}
+
+.map_info{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		min-width: 150px;
+		z-index: 100;
+		display: inline-block;
+		zoom: 1;
+		border: 1px solid #B9B8B4;
+		border-radius: 4px;
+		background: rgba(254, 254, 252, 0.85);
+		background-color: #f5f5f5\9;
+		*background-color: #f5f5f5\9;
+        zoom: 1;
+		font-size: 14px;
+		box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.2);
+		-webkit-box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.2);
+	}
+	
+	.map_info_title:first-child{
+		box-shadow: inset 0px -4px 10px -6px rgba(0,0,0,0.25);
+		-moz-box-shadow: inset 0px -4px 10px -6px rgba(0,0,0,0.25);
+		-webkit-box-shadow: inset 0px -4px 10px -6px rgba(0,0,0,0.25);
+		
+	}
+		.map_info_title{
+			padding: 5px 0 5px 10px;
+			border-bottom: 1px solid #B9B8B4;
+			clear: both;
+			font-weight: bold;
+		}
+		
+		.map_info_list_districts ul{
+			list-style-type: none;
+			padding: 2px 15px 5px 15px;
+			margin: 0;
+		}
+			.map_info_list_districts ul li{
+				margin: 0 -15px;
+				padding: 1px 25px 1px 15px;
+				cursor: pointer;
+			}
+		
+		.map_info_list_draw_actions{
+			height: 49px;
+		}
+		.map_info_list_draw_actions ul{
+			padding: 0 5px 0 0;
+			margin: 5px 0 0 0;
+			list-style-type: none;
+		}
+				.map_info_list_draw_actions ul li{
+					height: 47px;
+ 					width: 50px;
+					margin: 0 0 5px 5px;
+					float: left;
+					padding: 4px 6px 4px 6px;
+					cursor: pointer;
+					border-radius: 4px;		
+					transition: all 0.05s ease-in-out;
+				    -webkit-transition: all 0.05s ease-in-out;
+				    -moz-transition: all 0.05s ease-in-out;			
+				}
+				
+					.map_info_list_draw_actions ul li:hover{
+						background-color: #EEE !important;
+						box-shadow: 0px 0px 3px #555;
+						-moz-box-shadow: 0px 0px 3px #555;
+						-webkit-box-shadow: 0px 0px 3px #555;
+					}
+					
+					.map_info_list_draw_actions ul li.press{
+						background-color: red;
+					}
+					
+					.map_info_list_draw_actions ul li.active{
+						background-color: #DEDEDE !important; 
+						box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.4);;
+						-webkit-box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.4);
+						-moz-box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.4);
+					}
+					
+				
+
+			.map_info_list_districts ul li:hover{
+				background-color: #E5F5F5;
+			}	
+			
+			.map_info_list_districts ul li i{
+				padding: 0px 12px 0px 0px;
+				margin: 0 7px 0 -7px;
+			}
+				
+				.map_info_list_districts ul li.selected{
+					background-color: #BBE9F0;
+				}	
+			
+					.map_info_list_districts ul li.selected:hover{
+						background-color: #9fe0ea;
+					}	
+		
+				.map_info_list_districts ul li.over{
+					background-color: #a7daba;
+					text-decoration: underline;
+				}
+		
+		.map_info_list_districts ul li span{
+			border-bottom: 1px dotted #777;
+		}
+		
+		.map_info_list_districts ul li i.selected{
+			background: url(/img/done.png) no-repeat 0px 2px;
+		}
+		
+		
+	.map_info_clear{
+		background: rgba(254, 189, 96, 0.7);
+		box-shadow: inset 0px 3px 6px -2px #777;
+		
+	}	
+		.map_info_clear ul{
+			margin: 5px 0 0 0;
+			padding:  0;
+			list-style-type: none;
+		}
+		
+			.map_info_clear ul li{
+				margin: 0;
+				padding: 5px 25px 5px 25px;
+				cursor: pointer;
+			}
+			
+			.map_info_clear ul li:hover{
+				background: rgba(254, 168, 45, 0.4);
+			}
+			
+				.map_info_clear ul li i{
+					background: url(/img/erase.png) 0 0 no-repeat;
+					margin: 0 6px 0 -18px;
+					padding: 0 15px 0 0;
+				}
+				
+				.map_info_clear ul li span{
+					border-bottom: 1px dotted #777;
+				}
+
+#draw_poly_action{
+	background: url(/img/poly_action.png) no-repeat 6px 4px;
+}
+#draw_shape_action{
+	background: url(/img/shape_action.png) no-repeat 6px 4px;
+}				
+#draw_circle_action{
+	background: url(/img/circle_action.png) no-repeat 6px 4px;
+}
+
+.clear {
+	clear: both;
+}

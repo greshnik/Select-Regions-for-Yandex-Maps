@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Приложение для yandex map</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container theme-showcase">
+        <h1>Установите точку:</h1>
+        <div class="alert alert-success" role="alert">
+          <p>- Двойной клик удаляет точку</p>
+          <p>- Одинарный клик на пустом месте добавляет новую точку</p>
+          <p>- Клик по точке - редактирование точки</p>
+          <p>- Зеленая иконка - сохраненная точка</p>
+          <p>- Красная иконка - активная точка</p>
+          <p>- Синяя иконка - несозраненная точка точка</p>
+        </div>
+        <div class="top">
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        </div>
+        <h1>Нариусйте к ней сектор доставки:</h1>
+        <div class="top">
+            <div id="map2" style="height: 600px; width: 100%; position: relative;">
+                <canvas id="drawing-area"></canvas>
+                <div class="map_info">
+                    <div class="map_info_title">Методы выделения</div>
+                    <div class="map_info_list_draw_actions">
+                        <ul>
+                            <!--<li id="draw_poly_action" value="sds"></li>-->
+                            <li id="draw_shape_action"></li>
+                            <!--<li id="draw_circle_action"></li>-->
+                        </ul>
+                    </div>
+                    <div class="map_info_list_districts" style="display: none;">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="map_info_clear">
+                        <ul>
+                            <li><i></i><span>Очистить все</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Выберите регион</span>
+                <input type="text" class="form-control" id="region-data" placeholder="Регион" aria-describedby="basic-addon1" value="Москва">
+                <span class="input-group-btn">
+                <button class="btn btn-default" id="load-region" type="button">Загрузить</button>
+              </span>
+            </div>
+        </div>
+        <div class="top">
+            <button type="button" class="btn btn-lg btn-success right" id="save">Сохранить и к следующему квадрату</button>
+        </div>
+        <div class="clear"></div>
+        <div class="panel panel-primary" style="margin-top: 10px;">
+          <div class="panel-heading">
+            <h3 class="panel-title" id="panel-title">Сохраненные данные</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table" id="result">
+              <thead>
+                <tr>
+                  <td>Точка</td>
+                  <td>Сектор</td>
+                  <td>Регион</td>
+                  <td>Адрес</td>
+                  <td></td>
+                </tr>
+              </thead>
+            </table>
+            <a href="/back.php?do=csv" class="btn btn-success right" id="save">Сохранить CSV</a>
+          </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="/js/gdouglaspeuker.js" type="text/javascript"></script>
+    <script src="/js/notify.min.js" type="text/javascript"></script>
+    <script src="/js/ymap.js" type="text/javascript"></script>
+    <script src="/main.js" type="text/javascript"></script>
+</body>
+
+</html>
